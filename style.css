@@ -1,0 +1,48 @@
+:root {
+    --main-blue: #45567d;
+    --main-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--main-blue);
+}
+
+.nav-list a {
+    display: block;
+    color: white;
+    padding: 1.5rem;
+}
+
+.nav-list a:hover {
+    background-color: blue;
+}
+
+#navbar ul{
+    display: flex;
+    list-style-type: none;
+}
+
+#welcome-section {
+    background-color: cadetblue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+figure {
+    margin: 2rem;
+}
