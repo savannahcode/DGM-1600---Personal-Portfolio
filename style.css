@@ -1,23 +1,29 @@
 :root {
-    --main-blue: #45567d;
+    --grey-orange: #E0B04B;
     --main-white: #ffffff;
+    --light-orange: #FFB303;
+    --deep-orange: #FF700A;
+    --dark-orange: #DE750B;
 }
 
 * {
     margin: 0;
     padding: 0;
-    color: black;
+}
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a{
     text-decoration: none;
-    color: var(--main-white);
 }
 
 #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--main-blue);
+    background-color: var(--light-orange);
     position: fixed;
     width: 100%;
 }
@@ -25,20 +31,22 @@ a{
 .nav-list a {
     display: block;
     color: white;
+
+    font-size: 1.5rem;
     padding: 1.5rem;
 }
 
 .nav-list a:hover {
-    background-color: blue;
+    background-color: var(--grey-orange);
 }
 
-#navbar ul{
+ul{
     display: flex;
     list-style-type: none;
 }
 
 #welcome-section {
-    background-color: cadetblue;
+    background-color: var(--deep-orange);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -47,25 +55,80 @@ a{
 }
 
 h1{
-    font-size: 56px;
+    font-size: 4rem;
+    padding: 4rem;
+}
+
+h2 {
+    padding: 4rem;
+    font-size: 3rem;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark-orange);
 }
 
 figure {
     margin: 2rem;
 }
 
-#contact{
-    background-color: blueviolet;
+figcaption {
+    background-color: #999999;
+    text-align: center;
+    font-size: x-large;
+    border-radius: 2px 2px 6px 6px;
+    color: white;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--grey-orange);
+}
+
+.contact-details {
+    transition: tranform 0.3s ease-out;
+    color: white;
+}
+
+.contact-details:hover {
+    transform: translateY(12px);
+}
+
+.project-tiles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-links {
+    display: flex;
+}
+
+.contact-links a {
+    display: block;
+    padding: 2rem 3rem;
+    font-size: xx-large;
+}
+
+footer{
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--grey-orange);
 }
 
 @media (max-width:75em) {
     html{
-        font-size: 60%;
+        font-size: 80%;
     }
 }
 
 @media (max-width:60em) {
     html{
-        font-size: 40%;
+        font-size: 70%;
     }
 }
