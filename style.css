@@ -83,6 +83,10 @@ figcaption {
     color: white;
 }
 
+figcaption :hover{
+    background-color: #252525b4;
+}
+
 #contact {
     display: flex;
     flex-direction: column;
@@ -131,4 +135,9 @@ footer{
     html{
         font-size: 70%;
     }
+}
+
+figure img {
+    width: 19rem;
+    height: 13rem;
 }

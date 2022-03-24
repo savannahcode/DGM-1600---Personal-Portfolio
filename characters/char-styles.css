@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: cadetblue;
 }
 
 main{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 figure{
@@ -15,4 +17,20 @@ figure{
 
 figure img {
     max-height: 20rem;
+}
+
+figcaption{
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+    width: 13rem;
+    height: 3rem;
+    margin: 1rem;
+    background-color:crimson;
+    color: white;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

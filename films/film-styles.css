@@ -5,7 +5,30 @@
 }
 
 h1{
-    color: blue;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    background-color: rgb(71, 40, 207);
+
 }
 
-/* Feb 24 to  */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(71, 40, 207);
+}
+
+img{
+    width: 23rem;
+}
+
+figure{
+    margin: 1rem;
+}
+
+figcaption{
+    text-align: center;
+    color: aliceblue;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
