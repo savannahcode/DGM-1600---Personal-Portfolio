@@ -10,7 +10,7 @@ let filmList = document.querySelector('#filmList')
 
 for (let i = 0; i < films.length; i++) {
 
-// create element
+// create elements
 let figure = document.createElement('figure')
 let figImg = document.createElement('img')
 let figCaption = document.createElement('figcaption')
