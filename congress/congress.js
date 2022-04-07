@@ -1,61 +1,71 @@
-import { senators } from '../data/senators.js'
-import { representatives } from '../data/representatives.js'
+import { senators } from "../data/senators.js";
+import { representatives } from "../data/representatives.js";
 
-const senatorDiv = document.querySelector('.senatorsDiv')
-const seniorityHeading = document.querySelector('.seniority')
-const loyaltyList = document.querySelector(".loyaltyList")
+const allCongressMembers = [...senators, ...representatives] //modern way to combine arrays
 
-function simplifiedSenators(){
-    return senators.map(senator =>{
-        const middleName = senator.middle_name ? ` ${senator.middle_name} ` : " "
-        return{
-            id: senator.id,
-            name: `${senator.first_name}${middleName}${senator.last_name}`,
-            party: senator.party,
-            gender: senator.gender,
-            imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg"`,
-            seniority: +senator.seniority,
-            missedVotesPct: senator.missed_votes_pct,
-            loyaltyPct: senator.votes_with_party_pct
-        }
-    })
+const senatorDiv = document.querySelector(".senatorsDiv");
+const seniorityHeading = document.querySelector(".seniority");
+const loyaltyList = document.querySelector(".loyaltyList");
+
+function simplifiedSenators() {
+  return senators.map((senator) => {
+    const middleName = senator.middle_name ? ` ${senator.middle_name} ` : ` `;
+    return {
+      id: senator.id,
+      name: `${senator.first_name}${middleName}${senator.last_name}`,
+      party: senator.party,
+      gender: senator.gender,
+      imgURL: `https://www.govtrack.us/static/legislator-photos/${senator.govtrack_id}-200px.jpeg`,
+      seniority: +senator.seniority,
+      missedVotesPct: senator.missed_votes_pct,
+      loyaltyPct: senator.votes_with_party_pct,
+    };
+  });
 }
 
 // make a senator div to hold them all
-const simpleSenators = simplifiedSenators()
+const simpleSenators = simplifiedSenators();
 
-function populateSenatorDiv(senatorArray){
-    simpleSenators.forEach(senator => {
-        const senFigure = document.createElement('figure')
-        const figImg = document.createElement('img')
-        const figCaption = document.createElement('figcaption')
+function populateSenatorDiv(senatorArray) {
+  simpleSenators.forEach((senator) => {
+    const senFigure = document.createElement("figure");
+    const figImg = document.createElement("img");
+    const figCaption = document.createElement("figcaption");
 
-        figImg.src = senator.imgURL
-        figCaption.textContent = senator.name
+    figImg.src = senator.imgURL;
+    figCaption.textContent = senator.name;
 
-        senFigure.appendChild(figImg)
-        senFigure.appendChild(figCaption)
-        senatorDiv.appendChild(senFigure)
+    senFigure.appendChild(figImg);
+    senFigure.appendChild(figCaption);
+    senatorDiv.appendChild(senFigure);
 
-        // create Figure and image and figcaption elements
-        // set the image src to senators imgURL
-        //append them to the DOM
-    });
+    // create Figure and image and figcaption elements
+    // set the image src to senators imgURL
+    //append them to the DOM
+  });
 }
 
 populateSenatorDiv(simpleSenators);
 
 const mostSeniorMember = simplifiedSenators().reduce((acc, senator) => {
-    return acc.seniority > senator.seniority ? acc : senator
-})
+  return acc.seniority > senator.seniority ? acc : senator;
+});
 
-seniorityHeading.textContent = `The most senior member of the senate is ${mostSeniorMember.name}`
+const biggestMissedVotesPct = simplifiedSenators().reduce((acc, senator) =>
+  acc.missedVotesPct > senator.missedVotesPct ? acc : senator
+);
 
-const mostLoyal = simplifiedSenators().forEach(senator => {
-    if (sen.loyaltyPct === 100){
+const biggestVacationerList = simplifiedSenators().filter(
+    (senator) => senator.missedVotesPct === biggestMissedVotesPct.missedVotesPct
+  ).map(senator => senator.name).join(' and ')
+
+seniorityHeading.textContent = `The most senior member of the senate is ${mostSeniorMember.name} and the biggest vacationers are ${biggestVacationerList}`;
+
+// ERROR: function reading listItem as null for some reason
+/* simplifiedSenators().forEach(senator => {
+    if (senator.loyaltyPct === 100) {
         let listItem = document.createElement('li')
         listItem.textContent = senator.name
         loyaltyList.appendChild(listItem)
     }
-})
-
+}) */
