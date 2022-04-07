@@ -2,6 +2,8 @@ import { senators } from '../data/senators.js'
 import { representatives } from '../data/representatives.js'
 
 const senatorDiv = document.querySelector('.senatorsDiv')
+const seniorityHeading = document.querySelector('.seniority')
+const loyaltyList = document.querySelector(".loyaltyList")
 
 function simplifiedSenators(){
     return senators.map(senator =>{
@@ -42,3 +44,18 @@ function populateSenatorDiv(senatorArray){
 }
 
 populateSenatorDiv(simpleSenators);
+
+const mostSeniorMember = simplifiedSenators().reduce((acc, senator) => {
+    return acc.seniority > senator.seniority ? acc : senator
+})
+
+seniorityHeading.textContent = `The most senior member of the senate is ${mostSeniorMember.name}`
+
+const mostLoyal = simplifiedSenators().forEach(senator => {
+    if (sen.loyaltyPct === 100){
+        let listItem = document.createElement('li')
+        listItem.textContent = senator.name
+        loyaltyList.appendChild(listItem)
+    }
+})
+
