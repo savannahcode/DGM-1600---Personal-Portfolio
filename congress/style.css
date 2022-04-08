@@ -2,9 +2,26 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: red;
+    color: azure;
 }
 
 .senatorsDiv {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+h1{
+    text-align: center;
+    padding: 2rem;
+}
+
+h3 {
+    padding: 1.5rem;
+}
+
+figcaption {
+    text-align: center;
+    padding-bottom: 1rem;
 }
