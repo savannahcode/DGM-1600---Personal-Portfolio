@@ -1,3 +1,32 @@
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: white;
+}
+
+body{
+    background-color: #222222
+}
+
+.mainContainer {
+    display: flex;
+}
+
+.nav {
+    min-width: 16rem;
+}
+
+ul {
+    margin: 1rem;
+    list-style-type: none;
+    }
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: x-large;
 }

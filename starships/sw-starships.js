@@ -1,9 +1,10 @@
 import { starships } from "../data/starships.js";
+import { getLastNum, removeChildren } from "../utils/index.js"
 
 console.log("Is this working??")
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
-const shipView = document.querySelector('.shipViewer')
+const shipViewer = document.querySelector('.shipViewer')
 
 function populateNav(){
     starships.forEach((starship) => {
@@ -13,13 +14,18 @@ function populateNav(){
         listItem.textContent = starship.name
 
         anchorWrap.addEventListener('click', () => populateShipView(starship))
+        anchorWrap.appendChild(listItem)
 
-        navList.appendChild(listItem)
+        navList.appendChild(anchorWrap)
     })
 } 
 
-function populateShipView(){
-    console.log('Thanks for clicking on...', shipData.name)
+populateNav()
+
+function populateShipView(shipData){
+    removeChildren(shipViewer)
+    const shipImage = document.createElement('img')
+    shipImage.src = `https://starwars-visualguide.com/assets/img/starships/15.jpg`
+    shipViewer.appendChild(shipImage)
 }
 
-populateNav()
