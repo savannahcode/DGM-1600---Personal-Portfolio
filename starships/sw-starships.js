@@ -45,3 +45,10 @@ function populateShipView(shipData){
     shipViewer.appendChild(shipImage)
 }
 
+/* 
+add figcaption for ship images that pop up
+add border around ship image
+add star wars cursor
+charge header to look cuter and have some padding
+*/
+

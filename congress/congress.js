@@ -69,3 +69,9 @@ seniorityHeading.textContent = `The most senior member of the senate is ${mostSe
         loyaltyList.appendChild(listItem)
     }
 }) */
+
+
+/*
+fix error on Senators
+add padding and flex on images
+*/
