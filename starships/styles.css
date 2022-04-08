@@ -16,6 +16,16 @@ body{
     display: flex;
 }
 
+.box {
+    background-color: bisque;
+    font-size: xx-large;
+    text-align: center;
+}
+
+/* .modal-background {
+    background-color: #333;
+} */
+
 .nav {
     min-width: 16rem;
 }

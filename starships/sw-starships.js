@@ -1,10 +1,11 @@
 import { starships } from "../data/starships.js";
 import { getLastNum, removeChildren } from "../utils/index.js"
 
-console.log("Is this working??")
 const nav = document.querySelector('.nav')
 const navList = document.querySelector('.navList')
 const shipViewer = document.querySelector('.shipViewer')
+
+const modal = document.querySelector('.modal')
 
 function populateNav(){
     starships.forEach((starship) => {
@@ -27,6 +28,13 @@ function populateShipView(shipData){
     const shipImage = document.createElement('img')
     let shipNum = getLastNum(shipData.url)
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
+    
+    shipImage.addEventListener('error', () => {
+        console.log("We got an error!")
+        shipImage.hidden = true
+        modal.classList.add('is-active')
+    })
+
     shipViewer.appendChild(shipImage)
 }
 
