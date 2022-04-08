@@ -6,6 +6,12 @@ const navList = document.querySelector('.navList')
 const shipViewer = document.querySelector('.shipViewer')
 
 const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const shipMessage = document.querySelector('.shipMessage')
+
+closeButton.addEventListener('click', () => {
+    modal.classList.toggle("is-active")
+})
 
 function populateNav(){
     starships.forEach((starship) => {
@@ -32,7 +38,8 @@ function populateShipView(shipData){
     shipImage.addEventListener('error', () => {
         console.log("We got an error!")
         shipImage.hidden = true
-        modal.classList.add('is-active')
+        modal.classList.toggle('is-active')
+        shipMessage.textContent = `The ship known as "${shipData.name}" is in space port for repairs.`
     })
 
     shipViewer.appendChild(shipImage)
