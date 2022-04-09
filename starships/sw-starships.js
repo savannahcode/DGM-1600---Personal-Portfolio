@@ -31,10 +31,15 @@ populateNav()
 
 function populateShipView(shipData){
     removeChildren(shipViewer)
+    const shipFigure = document.createElement('figure')
     const shipImage = document.createElement('img')
+    const shipCaption = document.createElement('figcaption')
+
     let shipNum = getLastNum(shipData.url)
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
-    
+    shipCaption.textContent = shipData.name
+
+    //checks for error, creates modal
     shipImage.addEventListener('error', () => {
         console.log("We got an error!")
         shipImage.hidden = true
@@ -42,7 +47,9 @@ function populateShipView(shipData){
         shipMessage.textContent = `The ship known as "${shipData.name}" is in space port for repairs.`
     })
 
+    shipViewer.appendChild(shipFigure)
     shipViewer.appendChild(shipImage)
+    shipViewer.appendChild(shipCaption)
 }
 
 /* 
