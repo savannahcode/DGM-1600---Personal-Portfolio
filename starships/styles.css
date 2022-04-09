@@ -1,5 +1,6 @@
 h1 {
     color: white;
+    font-weight: bold;
 }
 
 body{
@@ -23,7 +24,19 @@ header {
 }
 
 .shipViewer img {
-    padding: 5rem;
+    border: 5px solid white;
+    border-radius: 25px;
+    border-width: 10px;
+}
+
+.shipViewer figure {
+    margin: 5rem;
+}
+
+.shipViewer figcaption {
+    text-align: center;
+    color: white;
+    font-size: medium;
 }
 
 .box {

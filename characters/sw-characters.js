@@ -48,7 +48,7 @@ header.appendChild(otherCharsButton)
 
 
 function populateDOM(characters){
-// loop through chars & make fig elenents & insert them in DOM
+// loop through chars & make fig elements & insert them in DOM
 removeChildren(main)
 characters.forEach((person) => {
     const personFig = document.createElement('figure')

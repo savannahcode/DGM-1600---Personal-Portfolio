@@ -48,8 +48,8 @@ function populateShipView(shipData){
     })
 
     shipViewer.appendChild(shipFigure)
-    shipViewer.appendChild(shipImage)
-    shipViewer.appendChild(shipCaption)
+    shipFigure.appendChild(shipImage)
+    shipFigure.appendChild(shipCaption)
 }
 
 /* 

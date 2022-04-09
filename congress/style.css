@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: red;
     color: azure;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .senatorsDiv {
@@ -25,3 +26,4 @@ figcaption {
     text-align: center;
     padding-bottom: 1rem;
 }
+
