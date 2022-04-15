@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
 .pokeGrid {
     display: flex;
     flex-wrap: wrap;
@@ -29,6 +34,10 @@
 .card.is-flipped {
     transform: rotateY(180deg);
   }
+
+.front {
+    background-color: aqua;
+}
 
 .back {
     background: blue;
