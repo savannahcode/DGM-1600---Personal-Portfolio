@@ -11,8 +11,7 @@ const getAPIData = async (url) => {
 
 async function loadPokemon(offset = 0, limit = 25){
     const pokeData = await getAPIData(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
-    const pokeResults = pokeData.results // this should be an array of name and url key/value pairs
-    for ( const nameAndURL of pokeResults){
+    for ( const nameAndURL of pokeData.results){
         const pokemon = await getAPIData(nameAndURL.url)
         populatePokeCard(pokemon)
     }
@@ -53,7 +52,16 @@ function populateCardBack(pokemon){
     const label = document.createElement('h4')
     label.textContent ='Abilities'
     pokeBack.appendChild(label)
+    const abilitiesList = document.createElement('ul')
+    pokemon.abilities.forEach(abilityItem => {
+        const listItem = document.createElement('li')
+        console.log(`Pokemon ${pokemon.name}'s ability is: ${abilityItem.ability.name}`)
+        listItem.textContent = abilityItem.ability.name
+        abilitiesList.appendChild(listItem)
+
+    })
+    pokeBack.appendChild(abilitiesList)
     return pokeBack
 }
 
-loadPokemon()
+loadPokemon(0, 25)

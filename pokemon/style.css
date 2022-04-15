@@ -40,7 +40,7 @@
 }
 
 .back {
-    background: blue;
+    background: #7979d1;
     transform: rotateY(180deg);
 }
 
