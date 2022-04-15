@@ -29,6 +29,7 @@ function populatePokeCard(pokemon) {
     
 
     pokeCard.appendChild(populateCardFront(pokemon))
+    pokeCard.appendChild(populateCardBack(pokemon))
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
 }
@@ -47,7 +48,12 @@ function populateCardFront(pokemon){
 }
 
 function populateCardBack(pokemon){
-
+    const pokeBack = document.createElement('div')
+    pokeBack.className = 'cardFace back'
+    const label = document.createElement('h4')
+    label.textContent ='Abilities'
+    pokeBack.appendChild(label)
+    return pokeBack
 }
 
 loadPokemon()
