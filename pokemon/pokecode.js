@@ -20,12 +20,6 @@ async function loadPokemon(offset = 0, limit = 25){
 
 const pokeGrid = document.querySelector('.pokeGrid')
 
-/* function populatepokeGrid(pokemonArray) {
-    //loop through all of the pokemon and create induvidual pokeCards
-    //populatePokeCard(pokemonArray[0])
-    console.log(pokemonArray)
-} */
-
 function populatePokeCard(pokemon) {
     const pokeScene = document.createElement('div')
     pokeScene.className = 'scene'
