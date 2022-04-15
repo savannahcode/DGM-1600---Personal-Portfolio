@@ -43,9 +43,9 @@ function populateCardFront(pokemon){
     const pokeFront = document.createElement('figure')
     pokeFront.className = 'cardFace'
     const pokeImg = document.createElement('img')
-    pokeImg.src = 'https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/official-artwork/143.png'
+    pokeImg.src = `https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
     const pokeCaption = document.createElement('figCaption')
-    pokeCaption.textContent = 'snorlax'
+    pokeCaption.textContent = pokemon.name
 
     pokeFront.appendChild(pokeImg)
     pokeFront.appendChild(pokeCaption)
