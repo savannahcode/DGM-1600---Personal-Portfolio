@@ -53,17 +53,17 @@ newButton.addEventListener("click", () => {
 })
 
 function makeAbilitiesArray(spacedString) {
-  return spacedString.split(',').map((typeName) => {
+  return spacedString.split(',').map((abilityName) => {
     return {
-      type: {name: typeName}
+      ability: {name: abilityName}
     }
   })
 }
 
 function makeTypesArray(commaString) {
-  return commaString.split(' ').map((abilityName) => {
+  return commaString.split(' ').map((typeName) => {
     return {
-      ability: {name: abilityName}
+      type: {name: typeName}
     }
   })
 }
