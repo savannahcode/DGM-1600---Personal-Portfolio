@@ -3,6 +3,24 @@
     box-sizing: border-box;
 }
 
+/* .head {
+    background-image: "..images/pokemonGroup.png";
+} */
+
+/*
+add styling for buttons
+make background cute pokemon themed
+add more buttons through js
+fix senators glitch
+do styling for other pages
+*/
+
+.head h1 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #a10000;
+}
+
 .pokeGrid {
     display: flex;
     flex-wrap: wrap;
