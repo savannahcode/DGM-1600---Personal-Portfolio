@@ -103,7 +103,13 @@ function populateCardFront(pokemon) {
   const pokeFront = document.createElement("figure")
   pokeFront.className = "cardFace front"
   const pokeType1 = pokemon.types[0].type.name
+  const pokeType2 = pokemon.types[1]?.type.name
   pokeFront.style.setProperty('background', getPokeTypeColor(pokeType1))
+  if(pokeType2) {
+    //fix gradient if there are two types for the pokemon
+    pokeFront.style.setProperty('background', `linear-gradient(${getPokeTypeColor(pokeType1)}, {$getPokeTypeColot(pokeType2)})`)
+  }
+  
   const pokeImg = document.createElement("img")
   if (pokemon.id > 9000) {
     //load local image
