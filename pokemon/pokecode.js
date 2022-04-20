@@ -26,7 +26,7 @@ async function loadPokemon(offset = 0, limit = 25) {
       abilities: pokemon.abilities,
       moves: pokemon.moves.slice(0, 3)
     }
-    loadPokemon.push(simplifiedPokemon)
+    loadedPokemon.push(simplifiedPokemon)
     populatePokeCard(simplifiedPokemon)
   }
 }
@@ -184,8 +184,10 @@ function getPokeTypeColor(pokeType){
 
 loadPokemon(0, 25)
 
+/*
 function getPokemonByType(type) {
   return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
 }
 
 console.log(getPokemonByType(grass))
+*/

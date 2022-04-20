@@ -3,9 +3,12 @@
     box-sizing: border-box;
 }
 
-/* .head {
-    background-image: "..images/pokemonGroup.png";
-} */
+.head {
+    background: url("../images/anotherPokemonGroup.jpeg");
+    background-color: #eb7676;
+    width: 655px;
+    height: 358px;
+}
 
 /*
 add styling for buttons
