@@ -7,13 +7,27 @@ const getAPIData = async (url) => {
   }
 }
 
+// only simplified pokemon inside of the array
+const loadedPokemon = []
+
 async function loadPokemon(offset = 0, limit = 25) {
   const pokeData = await getAPIData(
     `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
   )
   for (const nameAndURL of pokeData.results) {
     const pokemon = await getAPIData(nameAndURL.url)
-    populatePokeCard(pokemon)
+
+    const simplifiedPokemon = {
+      id: pokemon.id,
+      height: pokemon.height,
+      weight: pokemon.weight,
+      name: pokemon.name,
+      types: pokemon.types,
+      abilities: pokemon.abilities,
+      moves: pokemon.moves.slice(0, 3)
+    }
+    loadPokemon.push(simplifiedPokemon)
+    populatePokeCard(simplifiedPokemon)
   }
 }
 
@@ -88,6 +102,8 @@ function populatePokeCard(pokemon) {
 function populateCardFront(pokemon) {
   const pokeFront = document.createElement("figure")
   pokeFront.className = "cardFace front"
+  const pokeType1 = pokemon.types[0].type.name
+  pokeFront.style.setProperty('background', getPokeTypeColor(pokeType1))
   const pokeImg = document.createElement("img")
   if (pokemon.id > 9000) {
     //load local image
@@ -120,4 +136,50 @@ function populateCardBack(pokemon) {
   return pokeBack
 }
 
+function getPokeTypeColor(pokeType){
+  let color 
+  // if(pokeType === "grass") color = '#00FF00
+  switch (pokeType){
+    case 'grass':
+      color = '#FF0000'
+      break
+    case 'fire':
+      color = '#0000FF'
+      break
+    case 'water':
+      color = '#00FF00'
+      break
+    case 'bug':
+      color = '#7FFF00'
+      break
+    case 'normal':
+      color = '#F5F5DC'
+      break
+    case 'flying':
+      color = '#00FFFF'
+      break
+    case 'poison':
+      color = '#C300FF'
+      break
+    case 'electric':
+      color = '#C8FF00'
+      break
+    case 'psychic':
+      color = '#pink'
+      break
+    case 'ground':
+      color = '#brown'
+      break
+    default:
+      color = '#888888'
+  }
+  return color
+}
+
 loadPokemon(0, 25)
+
+function getPokemonByType(type) {
+  return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
+}
+
+console.log(getPokemonByType(grass))

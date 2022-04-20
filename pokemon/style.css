@@ -15,6 +15,12 @@ fix senators glitch
 do styling for other pages
 */
 
+/*
+Thor's Reccomendations:
+- make card background reflect type of pokemon it is
+- add more info to the back of the card
+*/
+
 .head h1 {
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
