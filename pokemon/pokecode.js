@@ -82,6 +82,8 @@ function makeTypesArray(commaString) {
   })
 }
 
+//TO DO: Make moves array (spaced or comma string)
+
 const pokeGrid = document.querySelector(".pokeGrid")
 
 function populatePokeCard(pokemon) {
@@ -153,7 +155,7 @@ function getPokeTypeColor(pokeType){
       color = '#0000FF'
       break
     case 'water':
-      color = '#00FF00'
+      color = '#6890F0'
       break
     case 'bug':
       color = '#7FFF00'
@@ -184,10 +186,8 @@ function getPokeTypeColor(pokeType){
 
 loadPokemon(0, 25)
 
-/*
 function getPokemonByType(type) {
   return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
 }
 
-console.log(getPokemonByType(grass))
-*/
+console.log(getPokemonByType('grass'))

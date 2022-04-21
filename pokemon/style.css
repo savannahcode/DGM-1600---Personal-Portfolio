@@ -4,12 +4,24 @@
 }
 
 .head {
-    background: url("../images/pokeImg.jpeg");
-    background-color: #eb7676;
-    width: 800px;
-    height: 400px;
+    background: url("../images/pokeImg.jpeg") center;
+    background-color: #ffe70e;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 30vh;
 }
 
+body {
+    background: url("../images/pokeBallnCards.jpeg") center;
+    background-color: #ffe70e;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.head img {
+    object-fit: cover;
+}
 /*
 add styling for buttons
 make background cute pokemon themed
@@ -56,7 +68,18 @@ Thor's Reccomendations:
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+    border-radius: 15px;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
 }
+
+/* trying to make hover 
+.card :hover {
+    border-radius: 15px;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 4px 3px rgba(252, 198, 21, 0.5);
+}
+*/
 
 .card.is-flipped {
     transform: rotateY(180deg);
@@ -71,6 +94,12 @@ Thor's Reccomendations:
     transform: rotateY(180deg);
 }
 
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 figure img{
     width: 200px;
     height: 200px;
@@ -78,4 +107,9 @@ figure img{
 
 figcaption {
     text-align: center;
+    text-transform: capitalize;
+}
+
+ul {
+    list-style-type: '- ';
 }
