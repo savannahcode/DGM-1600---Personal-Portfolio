@@ -1,26 +1,26 @@
 * {
-    margin: 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .head {
-    background: url("../images/pokeHeader.png") center;
-    background-color: #ffe70e;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    height: 30vh;
+  background: url("../images/pokeHeader.png") center;
+  background-color: #ffe70e;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 30vh;
 }
 
 body {
-    background: url("../images/pokeBallnCards.jpeg") center;
-    background-color: #ffe70e;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: url("../images/pokeBallnCards.jpeg") center;
+  background-color: #ffe70e;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .head img {
-    object-fit: cover;
+  object-fit: cover;
 }
 /*
 add styling for buttons
@@ -37,44 +37,69 @@ Thor's Reccomendations:
 */
 
 .head h1 {
-    text-align: center;
-    font-size: 6vw;
-    text-shadow: #000000b4; /* not working? */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: #000000a6;
-    padding-top: 4rem;
+  text-align: center;
+  font-size: 5vw;
+  font-style: bold;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-shadow: #000000b4; /* not working? */
+  font-family: "Kanit", sans-serif;
+  font-weight: 600;
+  color: #fffb09b0;
+  padding-top: 4rem;
+}
+
+.head button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  border-radius: 15px;
+  margin: 1.5rem 1rem 2rem 1rem;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
+  font-family: "Kanit", sans-serif;
+}
+
+.head button:hover {
+  background-color: #84dd87;
 }
 
 .pokeGrid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1rem;
 }
 
-.scene{
-    width: 200px;
-    height: 260px;
-    margin: .5em;
-    perspective: 600px;
+.scene {
+  width: 200px;
+  height: 260px;
+  margin: 0.5em;
+  perspective: 600px;
 }
 
-.card{
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-    position: relative;
+.card {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
 }
 
-.cardFace{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 15px;
-    padding: 0.5rem;
-    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
+.cardFace {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 0.5rem;
+  box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
+  font-family: "Kanit", sans-serif;
 }
 
 /* trying to make hover 
@@ -86,34 +111,38 @@ Thor's Reccomendations:
 */
 
 .card.is-flipped {
-    transform: rotateY(180deg);
-  }
+  transform: rotateY(180deg);
+}
 
 .front {
-    background-color: aqua;
+  background-color: aqua;
 }
 
 .back {
-    background: #7979d1;
-    transform: rotateY(180deg);
+  background: #bdff68;
+  transform: rotateY(180deg);
 }
 
 figure {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
-figure img{
-    width: 200px;
-    height: 200px;
+figure img {
+  width: 200px;
+  height: 200px;
+  padding-right: 1rem;
 }
 
 figcaption {
-    text-align: center;
-    text-transform: capitalize;
+  text-align: center;
+  text-transform: capitalize;
+  background-color: #fffef291;
+  padding: 0.5rem;
+  border-radius: 15px;
 }
 
 ul {
-    list-style-type: '- ';
+  list-style-type: "- ";
 }
