@@ -76,7 +76,6 @@ h2 {
 
 figure {
     margin: 2rem;
-    /* box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); /* Needs to be fixed to go nicely behind figure */
 }
 
 figcaption {
@@ -85,6 +84,11 @@ figcaption {
     font-size: x-large;
     border-radius: 2px 2px 6px 6px;
     color: white;
+    padding: .5rem;
+    width: 18rem;
+    height: auto;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); /* Needs to be fixed to go nicely behind figure */
+
 }
 
 figcaption :hover{
@@ -95,6 +99,9 @@ figure img {
     border-radius: 8px 8px 2px 2px;
     width: 100%;
     height: auto;
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); /* Needs to be fixed to go nicely behind figure */
+    width: 19rem;
+    height: 13rem;
 }
 
 #contact {
@@ -145,9 +152,4 @@ footer{
     html{
         font-size: 70%;
     }
-}
-
-figure img {
-    width: 19rem;
-    height: 13rem;
 }
