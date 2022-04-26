@@ -6,8 +6,8 @@
 .head {
   background: url("../images/pokeHeader.png") center;
   background-color: #ffe70e;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   width: 100vw;
   height: 30vh;
 }
@@ -17,6 +17,7 @@ body {
   background-color: #ffe70e;
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .head img {

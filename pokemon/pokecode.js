@@ -1,3 +1,5 @@
+import {removeChildren} from '../utils/index.js'
+
 const getAPIData = async (url) => {
   try {
     const result = await fetch(url)
@@ -39,12 +41,23 @@ class Pokemon {
       this.weight = weight,
       this.abilities = abilities,
       this.types = types;
+      this.hp = pokemon.stats[0].base_stat
   }
 }
 
+const header = document.querySelector("header")
+const loadButton = document.createElement('button')
+loadButton.textContent = 'Load Pokemon'
+header.appendChild(loadButton)
+loadButton.addEventListener('click', async() => {
+  if(loadedPokemon.length === 0){
+    removeChildren(pokeGrid)
+    await loadPokemon(0, 250)
+  }
+})
+
 const newButton = document.createElement("button")
 newButton.textContent = "New Pokemon"
-const header = document.querySelector("header")
 header.appendChild(newButton)
 
 newButton.addEventListener("click", () => {
@@ -215,10 +228,23 @@ function getPokeTypeColor(pokeType){
   return color
 }
 
-loadPokemon(0, 25)
+//loadPokemon(0, 250)
 
 function getPokemonByType(type) {
   return loadedPokemon.filter((pokemon) => pokemon.types[0].type.name === type)
 }
 
-console.log(getPokemonByType('grass'))
+const typeSelector = document.querySelector('#type-select')
+typeSelector.addEventListener('change', (event) => {
+  const userTypeChoice = event.target.value.toLowerCase()
+  if(event.target.value ==='Show all Pokemon') {
+    console.log('Show them all')
+    loadedPokemon.forEach((singleLoadedPokemon) => {
+      populatePokeCard(singleLoadedPokemon)})
+  } else {
+    const pokemonByType = getPokemonByType(userTypeChoice)
+    removeChildren(pokeGrid) // cleared out the grid from all pokemon
+    // now just lopp through the filtered array and populate
+    pokemonByType.forEach((eachSinglePokemon) =>populatePokeCard(eachSinglePokemon))
+  }
+})
