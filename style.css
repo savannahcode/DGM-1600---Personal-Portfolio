@@ -67,6 +67,16 @@ h2 {
     font-size: 3rem;
 }
 
+.transitionOne{
+    padding: 4rem;
+    background-image: linear-gradient(var(--basic-red), var(--medium-orange));
+}
+
+.transitionTwo {
+    padding: 4rem;
+    background-image: linear-gradient(var(--medium-orange), var(--grey-orange));
+}
+
 #projects {
     display: flex;
     flex-direction: column;
