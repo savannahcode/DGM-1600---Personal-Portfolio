@@ -23,19 +23,6 @@ body {
 .head img {
   object-fit: cover;
 }
-/*
-add styling for buttons
-make background cute pokemon themed
-add more buttons through js
-fix senators glitch
-do styling for other pages
-*/
-
-/*
-Thor's Reccomendations:
-- make card background reflect type of pokemon it is
-- add more info to the back of the card
-*/
 
 .head h1 {
   text-align: center;
@@ -169,5 +156,8 @@ div.cardFace.back {
 TO DO:
 
 need to fix new poke card glitch
-need to add styling to select
+
+add more buttons through js
+fix senators glitch
+do styling for other pages
 */
