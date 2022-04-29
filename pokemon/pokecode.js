@@ -131,7 +131,7 @@ function populateCardFront(pokemon) {
   pokeFront.style.setProperty('background', getPokeTypeColor(pokeType1))
   if(pokeType2) {
     //fix gradient if there are two types for the pokemon
-    pokeFront.style.setProperty('background', `linear-gradient(${getPokeTypeColor(pokeType1)}, {$getPokeTypeColor(pokeType2)})`)
+    pokeFront.style.setProperty('background', `linear-gradient(${getPokeTypeColor(pokeType1)}, ${getPokeTypeColor(pokeType2)})`)
   }
   
   const pokeImg = document.createElement("img")
