@@ -50,7 +50,8 @@ Thor's Reccomendations:
   padding-top: 4rem;
 }
 
-.head button {
+
+.head button, #type-select {
   background-color: #4caf50; /* Green */
   border: none;
   color: white;
@@ -63,6 +64,17 @@ Thor's Reccomendations:
   margin: 0rem 1rem 2rem 1rem;
   box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5);
   font-family: "Kanit", sans-serif;
+  width: 20%;
+}
+
+#type-select {
+  font-size: small;
+  width: 40%;
+}
+
+header div.menu-buttons {
+  display: flex;
+  justify-content: space-around;
 }
 
 .head button:hover {

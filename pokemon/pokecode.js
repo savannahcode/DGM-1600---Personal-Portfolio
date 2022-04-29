@@ -45,7 +45,8 @@ class Pokemon {
   }
 }
 
-const header = document.querySelector("header")
+const header = document.querySelector("header div")
+
 const loadButton = document.createElement('button')
 loadButton.textContent = 'Load Pokemon'
 header.appendChild(loadButton)
@@ -65,7 +66,7 @@ newButton.addEventListener("click", () => {
   const pokeHeighht = window.prompt("What is the Pokemon's height?", 20);
   const pokeWeight = window.prompt("What is the Pokemon's weight?", 1000);
   const pokeAbilities = window.prompt("What are your Pokemon's abilities? (Use a comma-separated list)", 'run, jump');
-  const pokeTypes = window.prompt("What are your Pokemon's types? (Up to two types seperated by a space)" , 'ground water');
+  const pokeTypes = window.prompt("What are your Pokemon's types? (Up to two types seperated by a forward slash)" , 'ground water');
 
 
   const newPokemon = new Pokemon(
