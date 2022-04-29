@@ -147,3 +147,8 @@ figcaption {
 ul {
   list-style-type: "- ";
 }
+
+div.cardFace.back {
+  font-size: .8rem;
+  padding-left: 1.5rem;
+}

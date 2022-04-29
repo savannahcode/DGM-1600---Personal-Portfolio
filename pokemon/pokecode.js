@@ -73,14 +73,15 @@ newButton.addEventListener("click", () => {
     45,
     2398,
     makeAbilitiesArray('run-away, gluttony'),
-    makeTypesArray("ground")
+    makeTypesArray("ground"),
+    makeMovesArray(pokeMoves)
   )
   console.log(newPokemon);
   populatePokeCard(newPokemon)
 })
 
 function makeAbilitiesArray(spacedString) {
-  return spacedString.split(',').map((abilityName) => {
+  return spacedString.split(' ').map((abilityName) => {
     return {
       ability: {name: abilityName}
     }
@@ -88,9 +89,17 @@ function makeAbilitiesArray(spacedString) {
 }
 
 function makeTypesArray(commaString) {
-  return commaString.split(' ').map((typeName) => {
+  return commaString.split(',').map((typeName) => {
     return {
       type: {name: typeName}
+    }
+  })
+}
+
+function makeMovesArray(slashString) {
+  return commaString.split('/').map((moveName) => {
+    return {
+      move: {name: moveName}
     }
   })
 }
@@ -143,9 +152,27 @@ function populateCardFront(pokemon) {
 function populateCardBack(pokemon) {
   const pokeBack = document.createElement("div")
   pokeBack.className = "cardFace back"
-  const label = document.createElement("h4")
-  label.textContent = "Abilities"
-  pokeBack.appendChild(label)
+
+  // append id
+  const idLabel = document.createElement("h4")
+  idLabel.textContent = "Pokemon ID: " + pokemon.id
+  pokeBack.appendChild(idLabel)
+
+  //append height
+  const heightLabel = document.createElement("h4")
+  heightLabel.textContent = "Height: " + pokemon.height
+  pokeBack.appendChild(heightLabel)
+
+  //append weight
+  const weightLabel = document.createElement("h4")
+  weightLabel.textContent = "Weight: " + pokemon.weight
+  pokeBack.appendChild(weightLabel)
+
+  // append abilities
+  const abilitiesLabel = document.createElement("h4")
+  abilitiesLabel.textContent = "Abilities"
+  pokeBack.appendChild(abilitiesLabel)
+
   const abilitiesList = document.createElement("ul")
   pokemon.abilities.forEach((abilityItem) => {
     const listItem = document.createElement("li")
@@ -154,13 +181,33 @@ function populateCardBack(pokemon) {
     abilitiesList.appendChild(listItem)
   })
   pokeBack.appendChild(abilitiesList)
-  // append id and moves list
-  const idLabel = document.createElement("h4")
-  idLabel.textContent = "Pokemon ID: "
-  pokeBack.appendChild(idLabel)
-  const idNum = document.createElement('p')
-  idNum.textContent = pokemon.id
-  pokeBack.appendChild(idNum)
+
+  // append types
+  const typesLabel = document.createElement("h4")
+  typesLabel.textContent = "Types"
+  pokeBack.appendChild(typesLabel)
+
+  const typesList = document.createElement("ul")
+  pokemon.types.forEach((typesItem) => {
+    const listItem = document.createElement("li")
+    listItem.textContent = typesItem.type.name
+    typesList.appendChild(listItem)
+  })
+  pokeBack.appendChild(typesList)
+
+  //append moves list
+  const movesLabel = document.createElement("h4")
+  movesLabel.textContent = "Moves"
+  pokeBack.appendChild(movesLabel)
+
+  const movesList = document.createElement("ul")
+  pokemon.moves.forEach((movesItem) => {
+    const listItem = document.createElement("li")
+    listItem.textContent = movesItem.move.name
+    movesList.appendChild(listItem)
+  })
+  pokeBack.appendChild(movesList)
+
   return pokeBack
 }
 
