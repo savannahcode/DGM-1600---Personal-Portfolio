@@ -10,7 +10,7 @@ body {
   background: linear-gradient(to right, #9e0000, #000281);
 }
 
-h1 {
+header h1 {
   color: black;
   text-shadow: 2px 2px 8px#ffffff;
   font-size: 3rem;
@@ -41,6 +41,15 @@ div.centerhead {
   justify-content: space-evenly;
 }
 
+.senatorInfo {
+    text-align: center;
+    margin: 2rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
 h1 {
   text-align: center;
   padding: 2rem;
@@ -50,7 +59,24 @@ h3 {
   padding: 1.5rem;
 }
 
+figure img {
+    margin: .5rem;
+}
+
+figure {
+    margin: .7rem;
+    padding: .5rem;
+    background-color: #090cd896;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 figcaption {
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  background-color: rgba(220,220,220, .3);
+  border-radius: 1rem;
+  margin: .2rem;
 }

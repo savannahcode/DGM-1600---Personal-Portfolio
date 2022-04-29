@@ -61,7 +61,9 @@ const biggestVacationerList = simplifiedSenators().filter(
 
 seniorityHeading.textContent = `The most senior member of the senate is ${mostSeniorMember.name} and the biggest vacationers are ${biggestVacationerList}`;
 
-// ERROR: function reading listItem as null for some reason
+const loyaltyListHeader = document.querySelector("h3.loyaltyListHeader");
+loyaltyListHeader.textContent = "When voting, these senators are most loyal to their political party:"
+ 
 simplifiedSenators().forEach(senator => {
   if(senator.loyaltyPct === 100) {
     let listItem = document.createElement('li')
