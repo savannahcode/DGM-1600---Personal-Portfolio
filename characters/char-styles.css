@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: cadetblue;
+    background: url(../images/noisy-texture-100x300-o40-d19-c-162a7a-t0.png);
+    font-family: "Share Tech Mono", serif;
 }
 
 main{
@@ -17,12 +18,13 @@ figure{
 
 figure img {
     max-height: 20rem;
+    border-radius: .5rem;
+    margin-bottom: .5rem;
 }
 
 figcaption{
     text-align: center;
     color: aliceblue;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 button {
@@ -32,5 +34,4 @@ button {
     background-color:crimson;
     color: white;
     font-size: large;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

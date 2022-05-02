@@ -2,14 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: url("../images/noisy-texture-100x300-o40-d19-c-162a7a-t0.png");
+    font-family: "Share Tech Mono", serif;
 }
 
 h1{
     color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    background-color: rgb(71, 40, 207);
-
+    margin: 3rem;
+    font-size: 5rem;
 }
 
 main{
@@ -19,16 +20,24 @@ main{
     background-color: rgb(71, 40, 207);
 }
 
-img{
+figure img{
     width: 23rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
 }
 
 figure{
     margin: 1rem;
 }
 
+figure img:hover {
+    filter: drop-shadow(10px 10px 10px rgb(255, 255, 255));
+}
+
 figcaption{
     text-align: center;
     color: aliceblue;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(64, 36, 192, 0.8);
+    border-radius: 1rem;
 }
