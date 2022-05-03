@@ -35,6 +35,9 @@ function populateSenatorDiv(senatorArray) {
     figImg.src = senator.imgURL;
     figCaption.textContent = senator.name;
 
+    senFigure.style.setProperty('background', getPartyColor(senator.party))
+
+
     senFigure.appendChild(figImg);
     senFigure.appendChild(figCaption);
     senatorDiv.appendChild(senFigure);
@@ -73,7 +76,17 @@ simplifiedSenators().forEach(senator => {
 })
 
 
-/*
-fix error on Senators
-add padding and flex on images
-*/
+function getPartyColor(senatorsParty){
+  let color 
+  switch (senatorsParty){
+    case 'R':
+      color = '#D2042D'
+      break
+    case 'D':
+      color = '#00008b'
+      break
+    default:
+        color = '#888888'
+  }
+  return color
+}
