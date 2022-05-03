@@ -6,6 +6,19 @@
     font-family: "Share Tech Mono", serif;
 }
 
+header h1{
+    text-align: center;
+    color: white;
+    margin: 2rem;
+    text-shadow: 3px 3px 5px black;;
+}
+
+header div {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
 main{
     display: flex;
     flex-wrap: wrap;
@@ -25,13 +38,19 @@ figure img {
 figcaption{
     text-align: center;
     color: aliceblue;
+    font-size: large;
+    margin: .5rem;
 }
 
 button {
     width: 13rem;
     height: 3rem;
     margin: 1rem;
-    background-color:crimson;
+    background:rgba(252, 27, 72, 0.76);
     color: white;
     font-size: large;
+}
+
+button:hover {
+    background: rgba(252, 27, 72, 0.4);
 }

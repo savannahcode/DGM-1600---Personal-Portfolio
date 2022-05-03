@@ -1,7 +1,7 @@
 import { people } from '../data/people.js'
 import { getLastNum, removeChildren } from '../utils/index.js'
 
-const header = document.querySelector('header')
+const header = document.querySelector('header div')
 const main = document.querySelector('main')
 
 const allCharsButton = document.createElement('button')
