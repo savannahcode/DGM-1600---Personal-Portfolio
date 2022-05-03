@@ -27,6 +27,26 @@ movieName.textContent = films[i].title
 releaseDate.textContent = films[i].release_date
 epidsodeID.textContent = " Episode " + films[i].episode_id
 
+// modal javascript
+const modal = document.querySelector('.modal')
+const closeButton = document.querySelector('.modal-close')
+const modalBackground = document.querySelector('.modal-background')
+const movieInfo = document.querySelector('.shipMessage')
+
+closeButton.addEventListener('click', () => {
+    modal.classList.toggle("is-active")
+})
+
+modalBackground.addEventListener('click', () => {
+    modal.classList.toggle("is-active")
+})
+
+figure.addEventListener('click', () => {
+    console.log("Modal should show!")
+    modal.classList.toggle('is-active')
+    movieInfo.textContent = `Movie Information: Characters, Location, Synopsis`
+})
+
 
 // append newly created img element as a child of the main element to make it appear in the DOM
 figure.appendChild(figImg)
@@ -38,3 +58,9 @@ figCaption.appendChild(epidsodeID)
 
 filmList.appendChild(figure)
 }
+
+figure.addEventListener('click', () => {
+    modal.classList.toggle("is-active")
+})
+
+

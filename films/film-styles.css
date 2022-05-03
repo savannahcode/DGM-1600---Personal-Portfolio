@@ -11,6 +11,7 @@ h1{
     text-align: center;
     margin: 3rem;
     font-size: 5rem;
+    text-shadow: 3px 3px 5px black;
 }
 
 main{
@@ -23,7 +24,7 @@ main{
 figure img{
     width: 23rem;
     margin-bottom: 1rem;
-    filter: drop-shadow(10px 10px 10px rgb(0, 0, 0));
+    filter: drop-shadow(0 0 30px rgb(0, 0, 0));
 }
 
 figure{
@@ -31,7 +32,7 @@ figure{
 }
 
 figure img:hover {
-    filter: drop-shadow(10px 10px 10px rgb(255, 255, 255));
+    filter: drop-shadow(0 0 30px rgb(255, 255, 255));
 }
 
 figcaption{
