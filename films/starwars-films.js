@@ -31,7 +31,7 @@ epidsodeID.textContent = " Episode " + films[i].episode_id
 const modal = document.querySelector('.modal')
 const closeButton = document.querySelector('.modal-close')
 const modalBackground = document.querySelector('.modal-background')
-const movieInfo = document.querySelector('.shipMessage')
+const movieInfo = document.querySelector('.movieInfo')
 
 closeButton.addEventListener('click', () => {
     modal.classList.toggle("is-active")
@@ -44,7 +44,7 @@ modalBackground.addEventListener('click', () => {
 figure.addEventListener('click', () => {
     console.log("Modal should show!")
     modal.classList.toggle('is-active')
-    movieInfo.textContent = `Movie Information: Characters, Location, Synopsis`
+    movieInfo.textContent = "Movie Information: Characters, Location, Synopsis"
 })
 
 
@@ -58,9 +58,5 @@ figCaption.appendChild(epidsodeID)
 
 filmList.appendChild(figure)
 }
-
-figure.addEventListener('click', () => {
-    modal.classList.toggle("is-active")
-})
 
 

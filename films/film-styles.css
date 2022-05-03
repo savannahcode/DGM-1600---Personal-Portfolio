@@ -42,3 +42,20 @@ figcaption{
     background-color: rgba(64, 36, 192, 0.8);
     border-radius: 1rem;
 }
+
+ .modal-background {
+     background-color: black;
+     border-radius: 2rem;
+ }
+
+ .box {
+    background-color: bisque;
+    font-size: xx-large;
+    text-align: center;
+}
+
+ .movieInfo {
+     color: white;
+     background-color: black;
+     font-size: x-large;
+ }
