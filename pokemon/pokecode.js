@@ -34,14 +34,15 @@ async function loadPokemon(offset = 0, limit = 25) {
 }
 
 class Pokemon {
-  constructor(name, height, weight, abilities, types) {
+  constructor(name, height, weight, abilities, types, moves) {
       this.id = 9001
       this.name = name,
       this.height = height,
       this.weight = weight,
       this.abilities = abilities,
       this.types = types;
-      this.hp = pokemon.stats[0].base_stat
+      this.moves = moves;
+      /* this.hp = pokemon.stats[0].base_stat */
   }
 }
 
@@ -63,18 +64,19 @@ header.appendChild(newButton)
 
 newButton.addEventListener("click", () => {
   const pokeName = window.prompt('What is the name of your new Pokemon?', 'Thoremon');
-  const pokeHeighht = window.prompt("What is the Pokemon's height?", 20);
+  const pokeHeight = window.prompt("What is the Pokemon's height?", 20);
   const pokeWeight = window.prompt("What is the Pokemon's weight?", 1000);
   const pokeAbilities = window.prompt("What are your Pokemon's abilities? (Use a comma-separated list)", 'run, jump');
-  const pokeTypes = window.prompt("What are your Pokemon's types? (Up to two types seperated by a forward slash)" , 'ground water');
+  const pokeTypes = window.prompt("What are your Pokemon's types? (Up to two types seperated by a comma)" , 'ground water');
+  const pokeMoves = window.prompt("What are your Pokemon's moves? (Up to two types seperated by a forward slash)" , 'tackle / fly');
 
 
   const newPokemon = new Pokemon(
-    "Thoremon",
-    45,
-    2398,
-    makeAbilitiesArray('run-away, gluttony'),
-    makeTypesArray("ground"),
+    pokeName,
+    pokeHeight,
+    pokeWeight,
+    makeAbilitiesArray(pokeAbilities),
+    makeTypesArray(pokeTypes),
     makeMovesArray(pokeMoves)
   )
   console.log(newPokemon);
@@ -98,7 +100,7 @@ function makeTypesArray(commaString) {
 }
 
 function makeMovesArray(slashString) {
-  return commaString.split('/').map((moveName) => {
+  return slashString.split('/').map((moveName) => {
     return {
       move: {name: moveName}
     }
