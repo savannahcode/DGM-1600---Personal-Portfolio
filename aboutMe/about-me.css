@@ -49,7 +49,7 @@ a{
 
 #welcome-section {
     background-color: var(--basic-red);
-    height: 100vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,7 +78,7 @@ h2 {
     background-image: linear-gradient(var(--medium-orange), var(--grey-orange));
 }
 
-#qualifications {
+.resume {
     /* display: flex;
     flex-direction: column;
     align-items: center; */
@@ -86,13 +86,14 @@ h2 {
     padding: 3rem;
 }
 
-#qualifications ul{
+.resume ul{
     display: block;
     list-style-type: disc;
     padding: 1rem;
     padding-left: 2rem;
 }
 
+/*
 figure {
     margin: 2rem;
 }
@@ -106,7 +107,7 @@ figcaption {
     padding: .5rem;
     width: 18rem;
     height: auto;
-    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); /* Needs to be fixed to go nicely behind figure */
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); 
 
 }
 
@@ -118,7 +119,7 @@ figure img {
     border-radius: 8px 8px 2px 2px;
     width: 100%;
     height: auto;
-    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); /* Needs to be fixed to go nicely behind figure */
+    box-shadow: 4px 4px 4px 3px rgba(0, 0, 0, 0.5); 
     width: 19rem;
     height: 13rem;
 }
@@ -154,6 +155,7 @@ figure img {
     padding: 2rem 3rem;
     font-size: xx-large;
 }
+*/
 
 footer{
     padding: 2rem;
