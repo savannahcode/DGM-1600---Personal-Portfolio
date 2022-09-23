@@ -63,8 +63,8 @@ h1{
 }
 
 h2 {
-    padding: 4rem;
-    font-size: 3rem;
+    padding: 1rem;
+    font-size: 2rem;
 }
 
 .transitionOne{
@@ -77,11 +77,16 @@ h2 {
     background-image: linear-gradient(var(--medium-orange), var(--grey-orange));
 }
 
-#projects {
-    display: flex;
+#qualifications {
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     background-color: var(--medium-orange);
+}
+
+.qualifications ul{
+    display: block;
+    list-style-type: disc;
 }
 
 figure {
