@@ -138,6 +138,9 @@ figure img {
 
 .contact-links {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
 }
 
 .contact-links a {
