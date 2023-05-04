@@ -157,10 +157,13 @@ figure img {
 }
 */
 
+
 footer{
     padding: 2rem;
     text-align: center;
     background-color: var(--grey-orange);
+    bottom: 0;
+    position: relative;
 }
 
 @media (max-width:75em) {
@@ -174,3 +177,40 @@ footer{
         font-size: 70%;
     }
 }
+
+#caseStudies{
+    background-color: var(--hot-pink);
+    padding: 2rem;
+    height: auto;
+}
+
+#caseStudies .buttons{
+    justify-content: center;
+}
+
+#caseStudies button {
+    background-color: var(--grey-orange);
+    border: none;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+}
+
+#caseStudies img {
+    float: right;
+    margin: 2rem;
+}
+
+img .right {
+    float: right;
+}
+
+img .left {
+    float: left;
+}
+
+
+#caseStudies p{
+    font-size: medium;
+}
+
